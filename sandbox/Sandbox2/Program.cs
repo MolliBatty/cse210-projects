@@ -2,8 +2,17 @@
 
 class Program
 {
+    static void ProcessDeposit(List<int> history, ref int total)
+    {
+        history.Add(50);
+        total += 50;
+    }
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        List<int> myHistory = [50,50];
+        int myBalance = 100;
+
+        ProcessDeposit (myHistory, ref mybalance);
+        Console.WriteLine($"New Balance: {myBalance}");
     }
 }
